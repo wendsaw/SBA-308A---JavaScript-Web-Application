@@ -1,0 +1,16 @@
+
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "description": "wheather",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node scripts.js"
+  },
+  "author": "wend",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
