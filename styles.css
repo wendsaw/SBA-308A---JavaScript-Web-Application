@@ -1,9 +1,43 @@
-body{
-    background:lightblue;
-    initial-letter: 0.2m;
-    font-size:0.8em;
-    
+
+/*// BASE STYLES //*/
+
+
+  
+
+/* body{
+  background: #eeedec;
+  initial-letter: 0.2m;
+  font-size:0.8em;
 }
 .container{
-    max-width: 400px;
-}
+  max-width: 400px;
+} */
+  .sky{
+    position: relative;
+  }
+  
+  .sky{
+    height: 40%;
+    background: skyblue;
+    
+  }
+  .change-location{
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: sticky;
+    top: 106px;
+ }
+
+  /*// ELEMENTS TO ANIMATE //*/
+  
+  
+  
+  /*// KEYFRAMES //*/
+  
+  
+  
+  
+  
+  
+  
+  
