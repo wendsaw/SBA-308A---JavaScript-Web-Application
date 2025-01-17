@@ -4,6 +4,7 @@ const cityForm = document.querySelector('Form');
 const card = document.querySelector('.card');
 const details = document.querySelector('.details')
 const time = document.querySelector('img.time')
+const cityData = document.querySelector('.list-group-item')
 
 
 const updateUI = (data) => {
@@ -17,13 +18,13 @@ const updateUI = (data) => {
       <span>${weather.Temperature.Metric.Value}</span>
       <span>&deg;C</span>
     </div>`
-    let timeSrc=null;
-    if(weather.IsDayTime){
-        timeSrc='Picture/daytime.jpg'
-    }else{
-        timeSrc='Picture/nighttime.jpg'
+    let timeSrc = null;
+    if (weather.IsDayTime) {
+        timeSrc = 'Picture/daytime.jpg'
+    } else {
+        timeSrc = 'Picture/nighttime.jpg'
     }
-    time.setAttribute('src',timeSrc)
+    time.setAttribute('src', timeSrc)
     if (card.classList.contains('d-none')) {
         card.classList.remove('d-none');
     }
@@ -50,8 +51,31 @@ cityForm.addEventListener('submit', e => {
     const city = cityForm.city.value.trim();
     cityForm.reset();
 
-    updateCity(city).then(data => updateUI(data))
+    updateCity(city).then(data =>{ updateUI(data)
+    console.log(data.cityDets.Country.LocalizedName)
+
+    cityData.innerHTML = `
+    <li class="list-group-item">Country Name:${data.cityDets.Country.LocalizedName}</li>
+      <li class="list-group-item list-group-item-primary"></li>
+      <li class="list-group-item list-group-item-secondary">Geo Position</li>
+      <li class="list-group-item list-group-item-success">City Name</li>
+      <li class="list-group-item list-group-item-danger">Primary Zip Code</li>
+      <li class="list-group-item list-group-item-warning">Region</li>
+      <li class="list-group-item list-group-item-info">Time Zone</li>
+      <li class="list-group-item list-group-item-light">Administrative Data</li>
+      <li class="list-group-item list-group-item-dark">Country Key</li>
+    `
+
+    })
+    
+
         .catch(Error => console.log(Error));
 
-    updateCity(city);
+    
+        
+        
+
+        
+
+
 });
