@@ -3,6 +3,8 @@
 const cityForm = document.querySelector('Form');
 const card = document.querySelector('.card');
 const details = document.querySelector('.details')
+const time = document.querySelector('img.time')
+
 
 const updateUI = (data) => {
     // const cityDets=data.cityDets;
@@ -15,9 +17,17 @@ const updateUI = (data) => {
       <span>${weather.Temperature.Metric.Value}</span>
       <span>&deg;C</span>
     </div>`
+    let timeSrc=null;
+    if(weather.IsDayTime){
+        timeSrc='Picture/daytime.jpg'
+    }else{
+        timeSrc='Picture/nighttime.jpg'
+    }
+    time.setAttribute('src',timeSrc)
     if (card.classList.contains('d-none')) {
         card.classList.remove('d-none');
     }
+
 
 }
 const updateCity = async (city) => {

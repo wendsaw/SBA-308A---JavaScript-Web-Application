@@ -1,7 +1,8 @@
 body{
-    background: #eeedec;
+    background:lightblue;
     initial-letter: 0.2m;
     font-size:0.8em;
+    
 }
 .container{
     max-width: 400px;
