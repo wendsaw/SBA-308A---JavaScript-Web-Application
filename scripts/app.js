@@ -59,11 +59,11 @@ cityForm.addEventListener('submit', e => {
       <li class="list-group-item list-group-item-primary"><h5>Country Name:</h5>${data.cityDets.Country.LocalizedName}</li>
       <li class="list-group-item list-group-item-secondary"><h5>Geo Position:</h5>( Latitude: ${data.cityDets.GeoPosition.Latitude}, Longitude: ${data.cityDets.GeoPosition.Longitude}, Elevation: ${data.cityDets.GeoPosition.Elevation.Metric.Value}${data.cityDets.GeoPosition.Elevation.Metric.Unit})</li>
       <li class="list-group-item list-group-item-success"><h5>English Name:</h5> ${data.cityDets.EnglishName}</li>
-      <li class="list-group-item list-group-item-danger">Primary Zip Code</li>
-      <li class="list-group-item list-group-item-warning">Region</li>
-      <li class="list-group-item list-group-item-info">Time Zone</li>
-      <li class="list-group-item list-group-item-light">Administrative Data</li>
-      <li class="list-group-item list-group-item-dark">Country Key</li>
+      <li class="list-group-item list-group-item-danger"><h5>Primary Zip Code:</h5>${data.cityDets.PrimaryPostalCode}</li>
+      <li class="list-group-item list-group-item-warning"><h5>Region:</h5>${data.cityDets.Region.LocalizedName}</li>
+      <li class="list-group-item list-group-item-info"><h5>Time Zone</h5>${data.cityDets.TimeZone.Code}</li>
+      <li class="list-group-item list-group-item-light"><h5>Administrative Data:${data.cityDets.AdministrativeArea.ID}</h5></li>
+     
     `
 
     })
