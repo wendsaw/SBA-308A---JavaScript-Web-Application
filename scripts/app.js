@@ -4,7 +4,7 @@ const cityForm = document.querySelector('Form');
 const card = document.querySelector('.card');
 const details = document.querySelector('.details')
 const time = document.querySelector('img.time')
-const cityData = document.querySelector('.list-group-item')
+const cityData = document.querySelector('.list-group')
 
 
 const updateUI = (data) => {
@@ -52,11 +52,11 @@ cityForm.addEventListener('submit', e => {
     cityForm.reset();
 
     updateCity(city).then(data =>{ updateUI(data)
-    console.log(data.cityDets.Country.LocalizedName)
+    console.log(data.cityDets)
 
     cityData.innerHTML = `
-    <li class="list-group-item">Country Name:${data.cityDets.Country.LocalizedName}</li>
-      <li class="list-group-item list-group-item-primary"></li>
+
+      <li class="list-group-item list-group-item-primary">Country Name:${data.cityDets.Country.LocalizedName}</li>
       <li class="list-group-item list-group-item-secondary">Geo Position</li>
       <li class="list-group-item list-group-item-success">City Name</li>
       <li class="list-group-item list-group-item-danger">Primary Zip Code</li>
