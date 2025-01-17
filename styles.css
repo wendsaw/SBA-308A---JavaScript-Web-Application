@@ -34,9 +34,35 @@
   
   /*// KEYFRAMES //*/
   
+  .cloud-move{
+    animation-name: cloud1;
+    animation-duration: 120s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction:linear
+  }
+
+  .cloud-move-1{
+    animation-name: cloud2;
+    animation-duration: 120s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction:reverse
+  }
   
   
   
+  /*// KEYFRAMES //*/
+  
+  
+  @keyframes cloud1 {
+    from{transform: translateX(-100px);}
+    to{transform: translateX(2000px);}
+  }
+  @keyframes cloud2 {
+    from{transform: translateX(-100px);}
+    to{transform: translateX(1000px);}
+  }
   
   
   

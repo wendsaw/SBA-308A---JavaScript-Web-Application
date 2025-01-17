@@ -69,7 +69,7 @@ cityForm.addEventListener('submit', e => {
     })
     
 
-        .catch(Error => console.log(Error));
+    .catch(Error => console.log(Error));
 
     
         
