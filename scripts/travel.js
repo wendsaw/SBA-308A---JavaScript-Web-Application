@@ -1,6 +1,6 @@
 const image=document.querySelector('img')
 
-const key=`6PBA0ZcQMHvw4PBqEGZ17BylGG4to0Gv`
+const key=`3VbLTlV2tZaZ5ABYwA8EoUIQVG8TShGD`
 
 // get weather iformation
  const getWeather=async(id)=>{

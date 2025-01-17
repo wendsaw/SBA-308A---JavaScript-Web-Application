@@ -28,8 +28,6 @@ const updateUI = (data) => {
     if (card.classList.contains('d-none')) {
         card.classList.remove('d-none');
     }
-
-
 }
 const updateCity = async (city) => {
 
@@ -51,10 +49,11 @@ cityForm.addEventListener('submit', e => {
     const city = cityForm.city.value.trim();
     cityForm.reset();
 
-    updateCity(city).then(data =>{ updateUI(data)
-    console.log(data.cityDets)
+    updateCity(city).then(data => {
+        updateUI(data)
+        console.log(data.cityDets)
 
-    cityData.innerHTML = `
+        cityData.innerHTML = `
 
       <li class="list-group-item list-group-item-primary"><h5>Country Name:</h5>${data.cityDets.Country.LocalizedName}</li>
       <li class="list-group-item list-group-item-secondary"><h5>Geo Position:</h5>( Latitude: ${data.cityDets.GeoPosition.Latitude}, Longitude: ${data.cityDets.GeoPosition.Longitude}, Elevation: ${data.cityDets.GeoPosition.Elevation.Metric.Value}${data.cityDets.GeoPosition.Elevation.Metric.Unit})</li>
@@ -67,15 +66,15 @@ cityForm.addEventListener('submit', e => {
     `
 
     })
-    
 
-    .catch(Error => console.log(Error));
 
-    
-        
-        
+        .catch(Error => console.log(Error));
 
-        
+
+
+
+
+
 
 
 });
