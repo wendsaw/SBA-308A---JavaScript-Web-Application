@@ -1,12 +1,11 @@
+// import * as updateCity from "./index";
+
 const image=document.querySelector('img')
 
 const key=`3VbLTlV2tZaZ5ABYwA8EoUIQVG8TShGD`
-
-// get weather iformation
- const getWeather=async(id)=>{
+  getWeather=async(id)=>{
     const base= `http://dataservice.accuweather.com/currentconditions/v1/`
     const query=`${id}?apikey=${key}`;
-
     const response=await fetch(base+query)
     const data=await response.json();
     console.log(data);
@@ -15,52 +14,29 @@ const key=`3VbLTlV2tZaZ5ABYwA8EoUIQVG8TShGD`
     );
     
     if (data[0].IsDayTime==false){
-
-      
       
           }
-   
-    
     return data[0];
-    
     
  }
 
-// get city iformation
 const getCity=async(city) =>{
 const base=`http://dataservice.accuweather.com/locations/v1/cities/search`;
 const query=`?apikey=${key}&q=${city}`;
-
 const response= await fetch(base + query);
-
 const data = await response.json();
 console.log(data);
-
-
 return data[0];
 }
-
-weatherAlert=async function(){
-
-   const base=`http://dataservice.accuweather.com/locations/v1/adminareas/`
-   const query=`${"BF"}?apikey=${key}`;
-   
+weatherAlert=async function(cityid){
+   const base=`http://dataservice.accuweather.com/alarms/v1/1day/`
+   const query=`${cityid}?apikey=${key}`;
    const response= await fetch(base+query);
    const data=await response.json();
    console.log(data);
-   
-   return
+   return data
 }
 
-weatherAlert();
-// getCity('manchester')
-//     .then(data => {
-//         return getWeather(data.Key)
-//     }).then(data =>{
-//         console.log(data)
-//     });
-
-    
 
 
 

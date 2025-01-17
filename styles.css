@@ -1,23 +1,12 @@
 
-/*// BASE STYLES //*/
-
-
-  
-
-/* body{
-  background: #eeedec;
-  initial-letter: 0.2m;
-  font-size:0.8em;
+body{
+  background-color: lightcyan;
 }
-.container{
-  max-width: 400px;
-} */
   .sky{
     position: relative;
   }
-  
   .sky{
-    height: 40%;
+    height: 30%;
     background: skyblue;
     
   }
@@ -49,11 +38,13 @@
     animation-iteration-count: infinite;
     animation-direction:reverse
   }
-  
-  
-  
-  /*// KEYFRAMES //*/
-  
+  .icon{
+    position:relative;
+    top:-50px;
+    border-radius:5%;
+    width:10px;
+    margin-bottom:-50px;
+  }
   
   @keyframes cloud1 {
     from{transform: translateX(-100px);}
